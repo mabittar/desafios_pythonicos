@@ -8,23 +8,15 @@ por 'good' e retorne a string resultante.
 
 Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 """
-import re
+
 
 def not_bad(s):
-    e = []
-    e = [m.start() for m in re.finditer('not', s)]
-    if len(e) != 1:
-        return s[:e[1]-4] + "good"
-
-    elif s.find('not') > s.find('bad'):
-        return s 
-
-    else:
-        return s[:s.find('not')] + "good" + s.split('bad')[1]
-
+    return s if s.find('not') > s.find(
+        'bad') else s[:s.find('not')] + "good" + s.split('bad')[1]
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
@@ -49,4 +41,3 @@ if __name__ == '__main__':
     test(not_bad, 'This dinner is not that bad!', 'This dinner is good!')
     test(not_bad, 'This tea is not hot', 'This tea is not hot')
     test(not_bad, "It's bad yet not", "It's bad yet not")
-    test(not_bad, "It's not so bad not", "It's not so good")

@@ -6,14 +6,22 @@ strings onde o comprimento da cadeia é 2 ou mais e o primeiro
 e o último caracteres da cadeia são os mesmos.
 
 PS: Python não possui o operador ++, porém += funciona.
+
+Estou acrescentando que também indique em quais palavras ocorrem a repetição
 """
+from collections import Counter
 
 def match_ends(words):
-    cnt = 0
+    cnt = Counter()
+    resposta = 0
+    repetida = []
     for word in words:
-        if len(word) >=2 and word[0] == word[-1]:
-            cnt += 1            
-    return cnt
+        if len(word)>1 and word[0] == word[-1]:
+            resposta += 1
+            cnt[word] += 1
+        for k,v in cnt.items():
+            repetida.append(k)     
+    return resposta, repetida
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

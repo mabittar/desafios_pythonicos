@@ -12,8 +12,7 @@ import itertools
 
 def remove_adjacent(nums):
     # +++ SUA SOLUÇÃO +++
-    lista = []
-    # tratando casos vazios ou com u elemento
+    # tratando casos vazios ou com um elemento
     if len(nums) == 0 or len(nums) == 1:
         return nums
     # removendo caracteres par lista >1

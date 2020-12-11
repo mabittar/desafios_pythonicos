@@ -12,7 +12,7 @@ Dica: Use uma custom key= function para extrair o ultimo elemento de cada tupla.
 
 
 def sort_last(tuples):
-    return sorted(tuples, key=lambda tuples: tuples[1])  # sort by age
+    return sorted(tuples, key=lambda tuples: tuples[1])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---

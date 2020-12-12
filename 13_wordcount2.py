@@ -52,40 +52,36 @@ e conferindo cada etapa do seu progresso.
 """
 
 import sys
+import re
 from collections import Counter
 
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
 
+# https://docs.python.org/3/library/collections.html#counter-objects
 
-# realiza a leitura do arquivo e retorna lista de palavras em caixa baixa
+
 def get_data(filename):
-    with open(filename, 'r') as file:
-        lista = file.read().split()
-    return [palavras.lower() for palavras in lista]
-
-
-# conta as palabras obtidas da função get_data e retorna dicionário de palavras e numero de repetições
-def contador(filename):
+    # realiza a leitura do arquivo e retorna dicionário de palavras e numero de repetições
     cnt = Counter()
-    words = get_data(filename)
+    lista = re.findall(r'\w+', open(filename).read().lower())
+    words = [palavras for palavras in lista]
     for word in words:
         cnt[word] += 1
     return cnt
 
 
-# recebe da função contador o dicionário e retorna os elementos ordenando pelas palabras
 def print_words(filename):
-    c = contador(filename)
+    # recebe da função contador o dicionário e retorna os elementos ordenando pelas palabras
+    c = get_data(filename)
     for k, v in sorted(c.items()):
         print(k, v)
 
 
-# recebe da função contador o dicionário e retorna os elementos ordenando pelas ocorrências
 def print_top(filename):
-    c = contador(filename)
-    top = c.most_common(20)
-    for k, v in top:
+    # recebe da função contador o dicionário e retorna os elementos ordenando pelas ocorrências
+    c = get_data(filename).most_common(20)
+    for k, v in c:
         print(k, v)
 
 

@@ -65,7 +65,7 @@ def print_mimic(mimic_dict, word, count=200):
     for i in range(count):
         word = random.choice(mimic_dict[word])
         lero_lero.append(word)
-    print(''.join(lero_lero))
+    print(' '.join(lero_lero))
 
 
 # Chama mimic_dict() e print_mimic()

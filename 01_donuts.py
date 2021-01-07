@@ -11,10 +11,10 @@ e donuts(23) retorna 'Number of donuts: many'
 
 
 def donuts(count):
-    if count < 10:
-        n = count
-    else:
+    if count >= 10:
         n = 'many'
+    else:
+        n = count
     return 'Number of donuts: {}'.format(n)
 
 

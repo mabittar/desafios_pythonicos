@@ -64,25 +64,36 @@ from collections import Counter
 def get_data(filename):
     # realiza a leitura do arquivo e retorna dicionário de palavras e numero de repetições
     cnt = Counter()
-    lista = re.findall(r'\w+', open(filename).read().lower())
-    words = [palavras for palavras in lista]
+    with open(filename) as f:
+        conteudo = f.read()
+
+    conteudo = re.findall(r'\w+', conteudo.lower())
+
+    words = [palavras for palavras in conteudo]
     for word in words:
         cnt[word] += 1
+
     return cnt
 
 
 def print_words(filename):
-    # recebe da função contador o dicionário e retorna os elementos ordenando pelas palabras
+    # recebe da função get_data o dicionário e retorna os elementos ordenando pelas palavras
     c = get_data(filename)
+    l = []
     for k, v in sorted(c.items()):
-        print(k, v)
+        l.append(f'{k} {v}')
+    out = '/n'.join(l)
+    print(out)
 
 
-def print_top(filename):
-    # recebe da função contador o dicionário e retorna os elementos ordenando pelas ocorrências
-    c = get_data(filename).most_common(20)
+def print_top(filename, limit=20):
+    # recebe da função get_data o dicionário e retorna os elementos ordenando pelas ocorrências
+    c = get_data(filename).most_common(limit)
+    l = []
     for k, v in c:
-        print(k, v)
+        l.append(f'{k} {v}')
+    out = '/n'.join(l)
+    print(out)
 
 
 # A função abaixo chama print_words() ou print_top() de acordo com os

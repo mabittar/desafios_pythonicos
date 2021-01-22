@@ -6,11 +6,12 @@ def esf_volume(r):
     vol = round(((4/3)*pi*r**3), 0)
     return vol
 
-
+# Uncomment to request a radius value and return the sphere volume
 # r = float((input("Entre com o raio para calcular o volume: ")))
 
 # print(esf_volume(r))
 
+# Uncomment to test
 ### -- TEST BLOCK -- ###
 class esf_volumeTest(unittest.TestCase):
     def test_say_4_when_1(self):

@@ -10,7 +10,7 @@ import unittest
 
 
 def robot(n):
-    out = (str("Fizz"*(n % 3 == 0))+str("Buzz"*(n % 5 == 0)) or str(n))
+    out = ("Fizz"*(n % 3 == 0)+"Buzz"*(n % 5 == 0) or str(n))
     return out
 
 # robot(3)

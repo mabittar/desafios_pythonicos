@@ -2,4 +2,9 @@
     "python.formatting.provider": "autopep8",
     "code-runner.clearPreviousOutput": true,
     "terminal.integrated.shell.windows": null,
+    "python.venvPath": "${workspaceFolder}/.venv",
+    "python.pythonPath": "Scripts\\python.exe",
+    "code-runner.executorMap": {
+        "python": "$pythonPath  -u $fullFileName",
+    },
 }

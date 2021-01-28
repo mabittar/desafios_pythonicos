@@ -18,7 +18,7 @@ class Employee():
         self.last = last
         self.pay = pay
 
-        # acresccendo o numero de empregados
+        # acrescendo o numero de empregados
         Employee.num_of_empls += 1
 
 # iremos criar um método para garantir as letras minúsculas do email
@@ -55,7 +55,7 @@ print("Tipo do Objeto e alocação do emp_1: ", emp_1)
 print("Tipo do Objeto e alocação do emp_1: ", emp_2)
 
 # 1. essa seria uma forma lenta e não pythonica para inserção dos dados em cada classe.
-# A forma pythonica seria criar dentro da classe uma instância para receber os atriutos
+# A forma pythonica seria criar dentro da classe uma instância para receber os atributos
 # emp_1.name = 'eme'
 # emp_1.last = 'bi'
 # emp_1.mail = 'eme.bi@test.com'
@@ -81,7 +81,7 @@ Employee.set_raise_amt(0.1)
 emp_1.apply_raise()
 # novo valário de salárrio
 print(emp_1.pay)
-# print("Novo salario com aumeto: {}". format(emp_1.pay))
+# print("Novo salario com aumento: {}". format(emp_1.pay))
 
 # imprimindo o número de empregados
 print("Empregados registrados: ", Employee.num_of_empls)

@@ -1,6 +1,5 @@
 {
     "python.formatting.provider": "autopep8",
-    "code-runner.clearPreviousOutput": true,
     "terminal.integrated.shell.windows": null,
     "python.venvPath": "${workspaceFolder}/.venv",
     "python.pythonPath": "Scripts\\python.exe",
@@ -20,4 +19,8 @@
         "-p",
         "*_test.py"
     ],
+    "cSpell.words": [
+        "empls"
+    ],
+    "code-runner.clearPreviousOutput": true,
 }

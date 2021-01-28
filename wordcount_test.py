@@ -4,7 +4,7 @@ from wordcount2 import main
 
 
 def run(mode, capsys, monkeypatch):
-    monkeypatch.setattr(sys, 'argv', ['13_wordcount2.py', mode, 'letras.txt'])
+    monkeypatch.setattr(sys, 'argv', ['wordcount2.py', mode, 'letras.txt'])
     main()
     out, _ = capsys.readouterr()
     return out

@@ -5,7 +5,8 @@
     "python.pythonPath": "Scripts\\python.exe",
     "python.autoComplete.extraPaths": [
         "${workspaceFolder}\\Lib\\site-packages",
-        "C:\\Python\\385\\Lib"
+        "C:\\python\\385\\Lib",
+        "C;\\python\\391\\Lib"
     ],
     "code-runner.executorMap": {
         "python": "$pythonPath  -u $fullFileName",

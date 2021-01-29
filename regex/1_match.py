@@ -19,5 +19,6 @@ out10 = re.findall('.$', 'abc\nedf\nhij', re.MULTILINE)
 # observer que volta o valor encontrado em duas linhas.
 out11 = re.findall('^$', '\n', re.MULTILINE)
 
+# para imprimir as respostas
 for i in range(1, 12):
     print(globals()['out'+str(i)])

@@ -3,13 +3,17 @@
     "terminal.integrated.shell.windows": null,
     "python.venvPath": "${workspaceFolder}/.venv",
     "python.pythonPath": "Scripts\\python.exe",
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}\\Lib\\site-packages",
+        "C:\\Python\\385\\Lib"
+    ],
     "code-runner.executorMap": {
         "python": "$pythonPath  -u $fullFileName",
     },
     "python.testing.pytestArgs": [
         "."
     ],
-    "python.testing.unittestEnabled": true,
+    "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": false,
     "python.testing.unittestArgs": [
@@ -23,4 +27,5 @@
         "empls"
     ],
     "code-runner.clearPreviousOutput": true,
+    "python.testing.promptToConfigure": false,
 }

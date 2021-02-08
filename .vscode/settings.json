@@ -30,4 +30,7 @@
     ],
     "code-runner.clearPreviousOutput": true,
     "python.testing.promptToConfigure": false,
+    "cSpell.ignoreWords": [
+        "niveis"
+    ],
 }

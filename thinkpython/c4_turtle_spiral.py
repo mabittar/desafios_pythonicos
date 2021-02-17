@@ -14,5 +14,5 @@ def spiral(sides, trun, color, width):
         t.right(trun)
 
 
-spiral(150, 45, "yellow", 5)
+spiral(150, 45, "green", 5)
 turtle.mainloop()

@@ -2,7 +2,7 @@
     "python.formatting.provider": "autopep8",
     "terminal.integrated.shell.windows": null,
     "python.venvPath": "${workspaceFolder}/.venv",
-    "python.pythonPath": "Scripts\\python.exe",
+    "python.pythonPath": "C:\\pyproject\\desafios_pythonicos\\Scripts\\python.exe",
     "python.autoComplete.extraPaths": [
         "${workspaceFolder}\\Lib\\site-packages",
         "C:\\python\\385\\Lib",
@@ -33,4 +33,5 @@
     "cSpell.ignoreWords": [
         "niveis"
     ],
+    "jupyter.jupyterServerType": "local",
 }

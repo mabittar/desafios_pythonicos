@@ -3,7 +3,7 @@ __pycache__
 .idea
 tempCodeRunnerFile.py
 .vscode/launch.json
-.vscode/
+.vscode
 
 ### venv ###
 # Virtualenv

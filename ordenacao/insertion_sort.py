@@ -11,7 +11,7 @@ print(lista_rand)
 start = time.time()
 
 
-# Funcao que realiza o insertion sort
+# Funcão que realiza o insertion sort
 def insertionSort(vetor):
     # A partir do primeiro elemento da lista
     for i in range(1, len(vetor)):

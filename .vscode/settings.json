@@ -2,13 +2,14 @@
     "python.formatting.provider": "autopep8",
     "terminal.integrated.shell.windows": null,
     "python.venvPath": "${workspaceFolder}/.venv",
-    "python.pythonPath": "C:\\pyproject\\desafios_pythonicos\\Scripts\\python.exe",
+    "python.pythonPath": "${workspaceFolder}\\Scripts\\python.exe",
     "python.autoComplete.extraPaths": [
-        "${workspaceFolder}\\Lib\\site-packages",
-        "C:\\python\\385\\Lib",
-        "C:\\Python\\391\\Lib",
-        "C:\\Python\\385\\Lib"
+        "${workspaceFolder}\\Lib",
+        "${workspaceFolder}\\Scripts",
+        "C:\\Python\\385",
     ],
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
         "python": "$pythonPath  -u $fullFileName",
     },
@@ -28,7 +29,6 @@
     "cSpell.words": [
         "empls"
     ],
-    "code-runner.clearPreviousOutput": true,
     "python.testing.promptToConfigure": false,
     "cSpell.ignoreWords": [
         "niveis"

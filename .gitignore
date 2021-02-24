@@ -3,7 +3,7 @@ __pycache__
 .idea
 tempCodeRunnerFile.py
 .vscode/launch.json
-.vscode
+.vscode/
 
 ### venv ###
 # Virtualenv
@@ -17,6 +17,7 @@ tempCodeRunnerFile.py
 pyvenv.cfg
 pip-selfcheck.json
 .vscode
+temp*.py
 
 # IPython
 profile_default/

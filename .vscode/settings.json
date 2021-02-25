@@ -10,6 +10,7 @@
     ],
     "code-runner.clearPreviousOutput": true,
     "code-runner.runInTerminal": true,
+    "code-runner.showExecutionMessage": false,
     "code-runner.executorMap": {
         "python": "$pythonPath  -u $fullFileName",
     },

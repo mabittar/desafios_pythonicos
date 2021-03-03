@@ -6,14 +6,27 @@ os exemplos aqui demonstrados foram retirados do site:
 https://www.peterbe.com/plog/fastest-way-to-uniquify-a-list-in-python-3.6
 """ 
 
-
-
+import functools
 import time
-import statistics
 import random
 
 
+# retorna o tempo de execução de uma função
+def timer(func):
+    @functools.wraps(func)
+    def temporizador(*args, **kwargs):
+        start_time = time.perf_counter()
+        value = func(*args, **kwargs)
+        end_time = time.perf_counter()
+        run_time = end_time - start_time
+        print("Terminou {} e {} secs".format(repr(func.__name__), round(run_time, 6)))
+        return value
+
+    return temporizador
+
+
 # processos que preservam a ordem original
+@timer
 def f1(seq):
     lista = []
     for e in seq:
@@ -22,12 +35,14 @@ def f1(seq):
     return lista
 
 
+@timer
 def f2(seq):
     lista = []
     [lista.append(i) for i in seq if not lista.count(i)]
     return lista
 
 
+@timer
 def f3(seq, id_=None):
     if id_ is None:
         def id_(x): return x
@@ -42,6 +57,7 @@ def f3(seq, id_=None):
     return resultado
 
 
+@timer
 def f4(seq, id_=None):
     return list(_f4(seq, id_))
 
@@ -64,30 +80,35 @@ def _f4(seq, id_=None):
             yield x
 
 
+@timer
 def f5(seq, id_=None):
     return list(_f4(seq))
 
 
+@timer
 def f6(seq):
     return list(dict.fromkeys(seq))
 
+
 # processos que nao preservam ordem original
-
-
+@timer
 def f11(seq):
     hash_ = {}
     [hash_.__setitem__(x, 1) for x in seq]
     return hash_.keys()
 
 
+@timer
 def f12(seq):
     return list(set(seq))
 
 
+@timer
 def f13(seq):
     return {}.fromkeys(seq).keys()
 
 
+@timer
 def f14(items):
     lista = set()
     for item in items:
@@ -95,9 +116,8 @@ def f14(items):
             lista.add(item)
     return list(lista)
 
+
 # função geradora da lista desordenada
-
-
 def lista_desordenada(length=50, amostra=30):
     """Função geradora de lista desordenada
 
@@ -112,18 +132,18 @@ def lista_desordenada(length=50, amostra=30):
     return lista_rand
 
 
-
-
-lista_rand = lista_desordenada()
+#gerando lista desordenada
+lista_rand = lista_desordenada(length=150, amostra=100)
 
 print("Lista original")
 print(lista_rand)
 
 # sequencia das funções válidas
-em_ordem = f1, f2, f3, f3, f4, f5, f6
-fora_ordem = f11, f12, f13, f14
+em_ordem = (f1, f2, f3, f3, f4, f5, f6)
+fora_ordem = (f11, f12, f13, f14)
+funcoes = em_ordem + fora_ordem
 
-
+#executando as funções de ordenação em_ordem
 for i, f in enumerate(em_ordem):
     if i:
         funcao = em_ordem[i-1]

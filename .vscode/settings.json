@@ -1,38 +1,29 @@
 {
-    "python.formatting.provider": "autopep8",
-    "terminal.integrated.shell.windows": null,
-    "python.venvPath": "${workspaceFolder}/.venv",
-    "python.pythonPath": "${workspaceFolder}\\Scripts\\python.exe",
-    "python.autoComplete.extraPaths": [
-        "${workspaceFolder}\\Lib",
-        "${workspaceFolder}\\Scripts",
-        "C:\\Python\\385",
-    ],
-    "code-runner.clearPreviousOutput": true,
-    "code-runner.runInTerminal": true,
-    "code-runner.showExecutionMessage": false,
-    "code-runner.executorMap": {
-        "python": "$pythonPath  -u $fullFileName",
-    },
-    "python.testing.pytestArgs": [
-        "."
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.nosetestsEnabled": false,
-    "python.testing.pytestEnabled": false,
-    "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        ".",
-        "-p",
-        "*_test.py"
-    ],
-    "cSpell.words": [
-        "empls"
-    ],
-    "python.testing.promptToConfigure": false,
-    "cSpell.ignoreWords": [
-        "niveis"
-    ],
-    "jupyter.jupyterServerType": "local",
+  "python.formatting.provider": "black",
+  "python.venvPath": "${workspaceFolder}/venv",
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}\\Lib",
+    "${workspaceFolder}\\Scripts",
+    "C:\\Python\\385"
+  ],
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.showExecutionMessage": false,
+  "code-runner.executorMap": {
+    "python": "$pythonPath  -u $fullFileName"
+  },
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "*_test.py"],
+  "cSpell.words": ["empls"],
+  "python.testing.promptToConfigure": false,
+  "cSpell.ignoreWords": ["niveis"],
+  "jupyter.jupyterServerType": "local",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}\\Lib",
+    "${workspaceFolder}\\Scripts",
+    "C:\\Python\\385"
+  ]
 }

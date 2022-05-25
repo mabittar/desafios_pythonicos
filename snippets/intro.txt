@@ -1,0 +1,9 @@
+O que são??
+Um decodorador é um invocável (callable) que aceita outra função como argumento (a função decorada).
+O decorator pode realizar algum processamento com a função e devolvê-la ou subsitituí-la por outra função.
+
+
+Quando o Python executa?
+Eles são executados imediatamente após a a função decorada ser definida.
+Normalmente ocorre em tempo de importação, ou seja, quando o módulo é carregado pelo interpretador.
+

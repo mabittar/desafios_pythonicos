@@ -3,7 +3,7 @@ Dado diversos vetores como string, retorne qual valor está ausente para complet
 
 exemplo: 
 [4,2,3,1,6] // primeiro vetor -> valor esperado 5
-[10,12,14,11,15] // segundo vetor -> valor esperadoo 13
+[10,12,14,11,15] // segundo vetor -> valor esperado 13
 [12032,12030,12031,12034,12036,12035] // terceiro vetor -> valor esperado 12033
 """
 import re

@@ -6,10 +6,11 @@ os exemplos aqui demonstrados foram retirados do site:
 https://www.peterbe.com/plog/fastest-way-to-uniquify-a-list-in-python-3.6
 """ 
 
+from collections import namedtuple
 import functools
 import time
 import random
-
+results = []
 
 # retorna o tempo de execução de uma função
 def timer(func):
@@ -19,7 +20,8 @@ def timer(func):
         value = func(*args, **kwargs)
         end_time = time.perf_counter()
         run_time = end_time - start_time
-        print("Terminou {} e {} secs".format(repr(func.__name__), round(run_time, 6)))
+        print("Terminou {} em {} ms".format(repr(func.__name__), round(run_time, 6) * 1000))
+        results.append((func.__name__, round(run_time, 6)))
         return value
 
     return temporizador
@@ -76,7 +78,7 @@ def _f4(seq, id_=None):
             x = id_(x)
             if x in lista:
                 continue
-            lista.add()
+            lista.add(x)
             yield x
 
 
@@ -155,3 +157,12 @@ for i, f in enumerate(fora_ordem):
         funcao = fora_ordem[i-1]
         out = funcao(lista_rand)
         print(set(out))
+        
+if len(results) > 0:
+    for result in results:
+        print(f"Function {result[0]}, tooked {result[1]} ms")
+
+from operator import itemgetter    
+minor = min(results, key=itemgetter(1))
+print(f"Better result Function {minor[0]}, tooked {minor[1]} ms")
+        

@@ -15,7 +15,7 @@ print(match(r'\d{2,}', '12345'))
 print(match(r'\d{2,}', '1'))
 
 # solicitando encontrar somente os (3) primeiros
-# a ? transoforma a repetição de gulosa para preguiçosa
+# a ? transforma a repetição de gulosa para preguiçosa
 print(match(r'\d{3,}?', '1234'))
 
 # solicitando encontrar minima de (2) e máximo (4)

@@ -13,7 +13,7 @@ exemplo de: http://pythonclub.com.br/encapsulamento-da-logica-do-algoritmo.html
 # 	valor = int(input('Entre com o valor de 0 a 10: '))
 # print("Você entrou com a valor: ", valor)
 """
-Conforme podemos observar essa é uma maneira simples para contornar o problema, entranto estamos presos no loop.
+Conforme podemos observar essa é uma maneira simples para contornar o problema, entretanto estamos presos no loop.
 """
 
 # Solução 2

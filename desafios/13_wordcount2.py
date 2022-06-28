@@ -46,8 +46,8 @@ Seu trabalho é implementar as funções print_words() e depois print_top().
 Dicas:
 * Armazene todas as palavras em caixa baixa, assim, as palavras 'A' e 'a'
   contam como a mesma palavra.
-* Use str.split() (sem parêmatros) para fazer separar as palavras.
-* Não construa todo o programade uma vez. Faça por partes executando
+* Use str.split() (sem parâmetros) para fazer separar as palavras.
+* Não construa todo o programa de uma vez. Faça por partes executando
 e conferindo cada etapa do seu progresso.
 """
 

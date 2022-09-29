@@ -17,6 +17,9 @@ Firstly, there are three main Python concurrency APIs, they are:
 
 ![](https://i0.wp.com/superfastpython.com/wp-content/uploads/2022/07/Python-Concurrency-API-Choice.jpg?ssl=1)
 
+## What Python concurrency is good for?
+Some types of programs naturally benefit from being written in async Python. For example, imagine an old-school web server that has a directory tree of HTML files it serves up in response to HTTP requests. Having the ability to pause/resume execution when waiting for a file to be read from disk, or while waiting for incoming connections or data on a network socket, is extremely useful there; traditionally, web server implementations had to spin up one worker thread or process (depending on the concurrency model in use) for each request, but async Python allows a large number of paused request handlers to coexist all in a single event loop. This in turn leads to more efficient use of resources, since fewer processes/threads have to be launched to handle requests.
+
 
 ## The steps are as follows:
 

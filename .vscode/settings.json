@@ -1,5 +1,5 @@
 {
-  "python.formatting.provider": "autopep8",
+  "python.formatting.provider": "none",
   "python.venvPath": "${workspaceFolder}/venv",
   "python.autoComplete.extraPaths": [
     "${workspaceFolder}\\Lib",
@@ -25,5 +25,8 @@
     "${workspaceFolder}\\Lib",
     "${workspaceFolder}\\Scripts",
     "C:\\Python\\385"
-  ]
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }

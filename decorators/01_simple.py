@@ -12,8 +12,8 @@ def greetings(name: str):
     
 if __name__ == "__main__":
     # calling the function directly
-    greetings = new_decorator(greetings, "John")
-    greetings()
+    greetings = new_decorator(greetings, "John") # type: ignore
+    greetings() # type: ignore
     # instead of calling the function directly, we pass it to the decorator
     @new_decorator
     def greetings(name: str):
